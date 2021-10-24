@@ -1,0 +1,33 @@
+MENGHITUNG_IPS
+
+	DECLARE int total, sks, ips
+	DECLARE string data[7][3] = {...}
+	  string sks1=data[0][0];
+          string sks2=data[1][0];
+          string sks3=data[2][0];
+          string sks4=data[3][0];
+          string sks5=data[4][0];
+          string sks6=data[5][0];
+          string sks7=data[6][0];
+
+          int num1=stoi(sks1);
+          int num2=stoi(sks2);
+          int num3=stoi(sks3);
+          int num4=stoi(sks4);
+          int num5=stoi(sks5);
+          int num6=stoi(sks6);
+          int num7=stoi(sks7);
+
+		FOR (i = 0) TO (i < 7) STEP (i++) DO
+		FOR (j = 0) TO (j < 3) STEP j++) DO
+			PRINT data[i][J]
+
+		total = (num1*4)+(num2*3)+(num3*2)+(num4*3.75)+(num5*1)+(num6*3.5)+(num7*2.75)
+		PRINT total
+
+		sks = num1 + num2 + num3 + num4 + num5 + num6 + num7
+		PRINT sks
+
+		ips = total / sks;
+		PRINT ipk
+END

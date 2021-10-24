@@ -1,0 +1,28 @@
+Psedoucode
+
+Kalkulator
+	DECLARE int FirstNumber, SecondNumber;
+	DECLARE char operation;
+	DECLARE float result;
+
+	PROMPT for FirsNumber
+	GET FirstNumber
+	PROMPT for operation
+	GET operation
+	PROMPT for SecondNumber
+	GET SecondNumber
+
+	IF (operation = *) THEN
+		WRITE return FirstNumber * SecondNumber
+	ELSE IF (operation = /) THEN
+		WRITE return FirstNumber / SecondNumber	
+	ELSE IF (operation = +) THEN
+		WRITE return FirstNumber + SecondNumber
+	ELSE IF (operation = -) THEN
+		WRITE return FirstNumber - SecondNumber
+	ELSE
+		PRINT "Anda Salah Memasukan perintah"
+	END IF
+
+	PRINT result
+END

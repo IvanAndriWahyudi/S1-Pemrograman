@@ -1,0 +1,76 @@
+
+
+	DECLARE int counter, pilihan
+	DECLARE char ulang
+	DECLARE string keyword_lowercase, keyword
+	DECLARE strinng arr[]
+	DECLARE int SIZE = sizeof(arr)/sizeof(string)
+
+	DO 
+		FOR (i = 1) TO (i < SIZE + 1) STEP (i++) DO
+			PRINT arr[i]
+		
+		PROMPT for pilihan
+		GET for pilihan
+
+		SWITCH pilihan
+			CASE 1 :
+				FOR (i = 0) TO (i < SIZE - 1) STEP (i++) DO
+					FOR (j = 0) TO (j < SIZE - 1 -i) STEP ( j++) DO
+					IF (arr[j] > arr[j+1])THEN
+						string temp = arr[j]
+                        			arr[j] = arr[j+1]
+                        			arr[j+1] = temp
+					END IF
+
+				PRINT "Ascending"
+				FOR (i = 0) TO (i < SIZE) STEP (i++) DO
+					PRINT arr[i]
+			BREAK
+
+			CASE 2 :
+				FOR (i = 0) TO (i < SIZE - 1) STEP (i++) DO
+					FOR (j = 0) TO (j < SIZE - 1 -i) STEP ( j++) DO
+					IF (arr[j] < arr[j+1])THEN
+						string temp = arr[j]
+                        			arr[j] = arr[j+1]
+                        			arr[j+1] = temp
+					END IF
+
+				PRINT "Descending"
+				FOR  (i = 0) TO (i < SIZE) STEP (i++) DO
+					PRINT arr[i]
+			BREAK
+
+			CASE 3 :
+				PROMPT for keyword
+				GET for keyword
+
+				keyword_lowcase = keyword
+				FOR (j = 0 ) TO (j < keyword_lowercase.length()) STEP (j++) DO
+					keyword_lowercase[j] = tolower(keyword_lowercase[j]
+				
+				counter = 0
+				FOR  (i = 0) TO (i < SIZE) STEP (i++) DO
+					string temporary = arr[i]
+					FOR (j = 0) TO (j < temporary.length()) STEP (j++) DO
+						temporary[j] = tolower(temporary[j])
+
+					IF (temporary == keyword_lowercase) THEN
+						PRINT i "Match"
+					ELSE
+						PRINT i "Not Match"
+					ENDIF
+
+					IF (counter > 0) THEN
+						PRINT "Data di temukan"
+					ELSE
+						PRINT "Data tidak di temukan"
+					ENDIF
+			BREAK
+
+		PROMPT for ulang
+		GET for ulang
+
+	WHILE (ulang == 'Y' || ulang == 'y')
+END

@@ -1,0 +1,18 @@
+PROGRAM_KELIPATAN_1_SAMPAI_10
+
+	DECLARE int myArray[10][10];
+	DECLARE int i, j;
+	
+	FOR (i=0) TO (i < 10) STEP (i++) DO
+		FOR (j=0) TO (j < 10) STEP (j++) DO
+		myArray[i][j] = (i+1)*(j+1)
+		NEXT
+	NEXT 
+	FOR (i=0) TO (i < 10) STEP (i++) DO
+		PRINT "Kelipatan  ke " i+1 "adalah"
+		FOR (j=0) TO (j < 10) STEAP (j++) DO 
+		PRINT myArray[i][j]
+		NEXT
+		PRINT "\n"
+	NEXT
+END

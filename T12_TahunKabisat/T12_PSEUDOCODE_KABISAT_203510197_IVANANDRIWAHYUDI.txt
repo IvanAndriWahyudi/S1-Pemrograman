@@ -1,0 +1,22 @@
+PROGRAM_TAHUN_KABISAT
+	DECLARE int tahun
+	DECLARE char ulang
+
+	DO
+		PROMPT for tahun
+		GET for tahun
+
+		IF (tahun % 400 == 0) THEN
+			PRINT "tahun kabisat"
+		IF ELSE (tahun % 100 == 0) THEN
+			PRINT "bukan tahun kabisat"
+		IF ELSE (tahun % 4 == 0) THEN
+			PRINT " tahun kabisat"
+		ELSE 
+			PRINT "bukan tahun kabisat"
+		END IF
+
+		PROMPT for ulang
+		GET ulang
+	WHILE (ulang == 'Y' || ulang == 'y')
+END
